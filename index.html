@@ -1,0 +1,123 @@
+<!-- 
+Shane Jeremich
+November 12th, 2023
+Code Exercise 06: HTML Forms 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>CE06 HTML Forms</title>
+</head>
+
+<body>
+  <main class="container">
+    <section class="filler-up">
+
+      <div class="card">
+        <div class="card__image"></div>
+        <div class="card__content">
+          <h1 class="card__title">Fill'er Up</h1>
+          <p class="card__description">How much milk do you need for your baking project? Easily convert gallons to
+            quarts, pints, or cups with our simple
+            form.</p>
+
+          <form action="#" class="filler-up__form">
+            <label for="gallons"># of Gallons to Convert</label>
+            <input type="number" name="gallons" id="gallons" min="0" max="100" step="0.01" class="filler-up__input"
+              required>
+
+            <fieldset class="filler-up__fieldset">
+              <legend class="filler-up__legend">What would you like to convert gallons to?</legend>
+              <div>
+                <input type="radio" name="measurement" id="quarts" value="quarts"" checked>
+                <label for=" quarts" class="filler-up__label">Quarts</label>
+              </div>
+
+              <div>
+                <input type="radio" name="measurement" id="pints" value="pints"">
+                <label for=" pints" class="filler-up__label">Pints</label>
+              </div>
+
+              <div>
+                <input type="radio" name="measurement" id="cups" value="cups"">
+                <label for=" cups" class="filler-up__label">Cups</label>
+              </div>
+            </fieldset>
+
+            <button class="card__button" type="submit" id="gallon-submit">Convert Gallons</button>
+          </form>
+        </div>
+
+        <div class="card__content">
+          <div class="filler-up__results">
+            <div class="filler-up__result">
+              <label for="quarts-result">Quarts</label>
+              <input type="text" name="quarts-result" id="quarts-result" class="filler-up__input" readonly>
+            </div>
+
+            <div class="filler-up__result">
+              <label for="pints-result">Pints</label>
+              <input type="text" name="pints-result" id="pints-result" class="filler-up__input" readonly>
+            </div>
+
+            <div class="filler-up__result">
+              <label for="cups-result">Cups</label>
+              <input type="text" name="cups-result" id="cups-result" class="filler-up__input" readonly>
+            </div>
+          </div>
+        </div>
+
+
+    </section>
+
+    <section class="movie-star">
+      <div class="card">
+        <div class="card__image" id="image-background">
+        </div>
+        <div class="card__content">
+          <h1 class="card__title">Movie Star</h1>
+          <p class="card__description">
+            How many movies you own will determine your rank in the movie club. Let's find out where you stand!
+          </p>
+
+          <p>Please input the number of movies you own in three different formats - DVD, Blu-Ray, and UltraViolets -
+            and click the
+            button to determine your rank in the movie club.</p>
+
+          <form action="#" class="movie-star__form">
+            <div class="movie-wrapper">
+              <label for="dvd">DVDs</label>
+              <input type="number" name="dvd" id="dvd" min="0" max="100" step="1" class="movie-star__input" required>
+            </div>
+
+            <div class="movie-wrapper">
+              <label for="blu-ray">Blu-Rays</label>
+              <input type="number" name="blu-ray" id="blu-ray" min="0" max="100" step="1" class="movie-star__input"
+                required>
+            </div>
+
+            <div class="movie-wrapper">
+              <label for="ultraviolet">UltraViolets</label>
+              <input type="number" name="ultraviolet" id="ultraviolet" min="0" max="100" step="1"
+                class="movie-star__input" required>
+            </div>
+
+            <button class="card__button" type="submit" id="movie-submit">Determine Rank</button>
+          </form>
+        </div>
+
+        <div class="card__content">
+          <div class="movie-star__results" id="movie-total">
+          </div>
+        </div>
+    </section>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

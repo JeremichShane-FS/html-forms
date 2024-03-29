@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(to bottom right, #00b4db, #0083b0);
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #222;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 75em;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr max-content;
+  gap: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  margin-bottom: 2rem;
+
+  .card__image {
+    grid-row: 1 / span 2;
+    background: url("https://is.gd/GKsC6R") center/cover;
+  }
+
+  .card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+
+    .card__title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .card__description {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .card__button {
+      display: block;
+      background-color: #00b4db;
+      color: #fff;
+      border: none;
+      border-radius: 0.25rem;
+      margin: 0 auto;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #0083b0;
+      }
+    }
+  }
+}
+
+.filler-up__form {
+  margin-bottom: 1rem;
+  .filler-up__label {
+    margin-bottom: 0.5rem;
+  }
+
+  .filler-up__fieldset {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    .filler-up__legend {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.filler-up__result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  margin: 0 auto;
+
+  .filler-up__input {
+    max-width: 7ch;
+    text-align: right;
+  }
+}
+
+.movie-star {
+  .card__image {
+    background: url("../img/director.jpeg") center/cover;
+  }
+
+  .movie-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    margin: 0 auto;
+
+    .movie-star__input {
+      max-width: 10ch;
+      text-align: right;
+    }
+  }
+
+  .movie-wrapper:nth-child(3) {
+    margin-bottom: 2rem;
+  }
+}
+
+.movie-star__results {
+  & p {
+    text-align: center;
+  }
+}
